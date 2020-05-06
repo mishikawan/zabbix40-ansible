@@ -20,7 +20,9 @@ CentOS7(or8)環境に、Zabbix4.0-server(rpm)とZabbix-agent(rpm)の機能を自
 * zabbix-server
   + Firewallの穴開け(http,snmptrap,zabbix-server)
   + zabbix4.0(zabbix official repo)
-	+ httpd, php, db(mariadb or mysql)の設定
+  + httpd, php, db(mariadb or mysql)の設定
+  + CentOS8の場合、mariadbではなく、mysqlを利用(https://support.zabbix.com/browse/ZBX-16465 の回避)
+	
   
 * zabbix-agent
 	+ zabbix-agent4.0
