@@ -28,19 +28,18 @@ CentOS7(or8)環境に、Zabbix4.0-server(rpm)とZabbix-agent(rpm)の機能を自
 	+ zabbix-agent4.0
   + zabbix-agentの設定(Server,ServerActive,HostnameItem)
 
-# 指定可能なインストール先
+# 指定可能なインストール先/設定内容
 
 * zabbix40/inventory/inventory.ini
 
 ```
-[zabbix_servers] ... zabbix server
-[zabbix_agents] ... zabbix-agent client
+[servers] ... zabbix server
+[agents] ... zabbix-agent client
+[all:vars] ... vars(全体用)
+[servers:vars] ... vars(servers用)
 ```
 
-# 指定可能な設定内容
-
-* zabbix40/inventory/inventory.ini 
-
+今回、仮設定した内容（適宜等ファイルを変更して利用してください)
 ```
 [servers]
 testsv01 ansible_ssh_host=192.168.11.1 ansible_ssh_user=root
